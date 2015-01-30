@@ -1,0 +1,124 @@
+<div id="dis-orderform">
+	<form name="OrderForm" action="{APP_PATH}/{APP_NAME}" method="post" id="OrderForm">
+		<input name="cmd" type="hidden" value="{cmd}" />
+		<input name="orordn" type="hidden" value="{orordn}" />
+		<input name="orwebn" type="hidden" value="{orwebn}" />
+		<input name="step" type="hidden" value="3" />
+		<input name="MaxWeight" type="hidden" value="{MaxWeight}" />
+		<input name="StdShipRequestDays" type="hidden" value="{StdShipRequestDays}" />
+		<input name="StdMinShipRequestDays" type="hidden" value="{StdMinShipRequestDays}" />
+		<input name="MinQtyRequired" type="hidden" value="{MinQtyRequired}" />
+		<input name="ReadOnly" type="hidden" value="{ReadOnlyYN}" />
+		<input name="InvoiceWarning" type="hidden" value="{InvoiceWarning}" />
+		<p class="formheader">BERGHOFF ORDER FORM</p>
+		<div id="orderinput">
+        <div class="CustomerInfo">
+        	<div><img src="{IMAGE_PATH}/{BHLogo}" width="150"/></div>
+            <div>
+            	Contact: Joe Ricchetti<br />
+            	Phone: 847-476-0587<br /><br /><br /><br /><br />
+            </div>
+        </div>
+		<div class="CustomerInfo">
+			<div>
+				<label for="orordn" class="FormLabel">Order Number: </label>
+				<input name="orordn" type="text" value="{orordn}" class="FormAutoFill BlockInput" tabindex="-1" readonly="readonly" /><br />
+				
+				<label for="orordt" class="FormLabel">Order Date: </label>
+				<input name="orordt" type="text" value="{orordt}" class="FormAutoFill BlockInput" tabindex="-1" readonly="readonly" /><br />
+				
+				<label for="dsdisn" class="FormLabel">Cust: </label>
+				<input name="dsdisn" type="text" value="{dsdisn}" class="FormAutoFill BlockInput" tabindex="-1" readonly="readonly" /><input name="ordisn" type="hidden" value="{dsdisn}" /><br />
+				
+				<label for="dsname" class="FormLabel">Cust Name: </label>
+				<input name="dsname" type="text" value="{dsname}" class="FormAutoFill BlockInput" tabindex="-1" readonly="readonly" size="25" /><br />
+				
+				<label for="dscont" class="FormLabel">Contact: </label>
+				<input name="dscont" type="text" value="{dscont}" class="FormAutoFill BlockInput" tabindex="-1" /><br />
+				
+			</div>
+			<div>
+				<br />
+				<label for="orrqdt" class="FormLabel">Ship Date: </label>
+				<input type="hidden" name="orrqdt" value="{orrqdt}" size="10" />
+				<select name="ShipMonth" class="validate-not-empty" title="Ship month is required">
+				<!-- BEGIN monthShipBlock -->
+				<option value="{ShipMonthValue}" {ShipMonthSelected}>{ShipMonthDisplay}</option>
+				<!-- END monthShipBlock -->
+				</select> 
+				<select name="ShipDay" class="validate-not-empty" title="Ship day is required" >
+				<!-- BEGIN dayShipBlock -->
+				<option value="{ShipDayValue}"  {ShipDaySelected}>{ShipDayDisplay}</option>
+				<!-- END dayShipBlock -->
+				</select>
+				<select name="ShipYear" class="validate-not-empty" title="Ship year is required" >
+				<!-- BEGIN yearShipBlock -->
+				<option value="{ShipYearValue}" {ShipYearSelected}>{ShipYearDisplay}</option>
+				<!-- END yearShipBlock -->
+				</select>
+
+				<label for="orpono" class="FormLabel">PO#: </label>
+				<input name="orpono" type="text" value="{orpono}" maxlength="9" title="PO# is required" class="required BlockInput" {ReadOnly} /><br />
+				<label for="dsemal" class="FormLabel">E-Mail: </label>
+				<input name="dsemal" type="text" value="{dsemal}" class="FormAutoFill BlockInput" tabindex="-1" size="25" readonly="readonly" /><br />
+				<label for="dsphon" class="FormLabel">Phone: </label>
+				<input name="dsphon" type="text" value="{dsphon}" class="FormAutoFill BlockInput" tabindex="-1" readonly="readonly" /><br />
+			</div>
+		</div>
+		<br />			<br />
+		<!-- BEGIN orderColumnBlock -->
+		<div class="OrderColumn">
+		<table width="100%" class="grid">
+			<col align="center" width="20%" id="ProductCol" />
+			<col align="center" width="44%" id="DescriptionCol" />
+			<col align="center" width="16%" id="QtyPalCol" />
+			<col align="center" width="19%" id="QtyCol" />
+			<tr>
+				<th scope="col">Product #</th>
+				<th scope="col">Description</th>
+				<th scope="col">Qty/Pal</th>
+				<th scope="col">Qty</th>
+			</tr>
+			<!-- BEGIN orderItemBlock -->
+			<tr id="OrderItemRow{OrderRowId}">
+				<td><input name="ctcatn[]" type="text" value="{ctcatn}" size="8"  class="FormAutoFill ctcatn" tabindex="-1" readonly="readonly" />&nbsp;&nbsp;<input name="orcatn[]" type="hidden" value="{ctcatn}" /></td>
+				<td align="left" {special}> {Description}</td>
+				<td><input name="qtypal[]" type="text" value="{qtypal}" class="FormAutoFill numeric" tabindex="-1" readonly="readonly" /></td>
+				<td><input name="oroqty[]" type="text" value="{oroqty}" size="5" {display} class="oroqty" {ReadOnly} /><input name="MinQty[]" type="hidden" value="{MinQty}" size="2" class="FormAutoFill numeric" tabindex="-1" readonly="readonly" /><input name="ctwght[]" type="hidden" value="{ctwght}" /></td>
+			</tr>
+			<!-- END orderItemBlock -->
+		</table>
+		</div>
+		<!-- END orderColumnBlock -->
+		</div>
+		<br class="clear" />
+		<div class="dis-orderweight"><label for="OrderWeight" class="LongLabel">Total order weight less pallets: </label>
+			<input name="OrderWeight" type="text" value="{OrderWeight}" size="5" class="FormAutoFill {ExtraClasses}" id="OrderWeight" tabindex="-1" />&nbsp;&nbsp;&nbsp;lbs</div>
+		<p></p>
+		<br class="clear" />
+		<div class="dis-comment">
+			<div class="dis-comment-order-add" {DisplayOrderAddComment}>
+				<label for="OrderComment1">Order Comments:&nbsp;&nbsp;&nbsp;(Max comment line length is 50 characters)</label><br />
+				<input name="OrderComment1" id="OrderComment1" type="text" value="{OrderComment1}" size="55" maxlength="50" tabindex="0" {ReadOnlyCommentAdd} {display1} /><br />
+				<input name="OrderComment2" id="OrderComment2" type="text" value="{OrderComment2}" size="55" maxlength="50" tabindex="0" {ReadOnlyCommentAdd} {display2} /><br />
+			</div>
+			<div class="dis-comment-order-modify" {DisplayOrderModifyComment}>
+				<label for="OrderComment3">Change Order Comments:&nbsp;&nbsp;&nbsp;(Max comment line length is 50 characters)</label><br />
+				<input name="OrderComment3" id="OrderComment3" type="text" value="{OrderComment3}" size="55" maxlength="50" {ReadOnlyCommentModify} /><br />
+				<input name="OrderComment4" id="OrderComment4" type="text" value="{OrderComment4}" size="55" maxlength="50" {ReadOnlyCommentModify} /><br />
+			</div>
+		</div>
+		<br class="clear" />
+		<div class="actionButtons" id="OrderPushButtons">
+					<input name="Submit" type="submit" value="{SubmitOrder}" class="ButtonSubmit" {DisableSubmitButton} />
+			<a href="{APP_PATH}/{APP_NAME}?cmd=delete&orordn={orordn}" class="ButtonSubmit" {DisableDeleteButton}>Delete Order</a>
+			<a href="{APP_DIR}/{HOME_APP}" class="ButtonSubmit" {DisableMainButton}>Return to Main Menu</a>
+			<a href="{APP_PATH}/{APP_NAME}?cmd=display" class="ButtonSubmit" {DisableDisplayButton}>Return to Order Display</a>
+					<input name="Reset" type="reset" value="Clear Changes" class="ButtonSubmit" id="Reset" {DisableResetButton} />&nbsp;
+		</div>
+	</form>
+</div>
+<script type="text/javascript">
+	YAHOO.util.Event.onDOMReady (attachDOMReady); // IE appears to have a problem with this
+	// YAHOO.util.Event.addListener(window, "load", attachDOMReady); 
+</script>

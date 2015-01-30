@@ -1,0 +1,804 @@
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body .dis-content {
+	font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+	font-size: small;
+	color: #DEC279;
+}
+.Content {
+	margin-top: 2em;
+}
+form {
+	background-color:transparent;
+	margin-bottom:1em;
+}
+.dis-content {
+	margin-top: 3em;
+	padding-bottom:1em;
+}
+.SPBForm {
+}
+.column{
+	float:left !important;margin-left:50px;
+}
+.dis-login {
+	    border: 1px solid #DEC279;
+	    left: 0;
+	    line-height: 1.8em;
+	    margin-left: 50px;
+	    margin-top: 0px;
+	    padding-bottom: 2em;
+	    position: relative;
+	    width: 250px;
+}
+#newpasswordform {
+	width:300px;
+	line-height:1.8em;
+}
+#InvoiceForm {
+	width:95%;
+}
+.dis-profile {
+	width:370px;
+	border: 1px solid #DEC279;
+	line-height:1.8em;
+	padding-bottom:2em;
+	position:relative;
+	left:50%;
+	margin-left:-185px;
+}
+#dis-orderdisplay {
+	width:600px;
+	border: 1px solid #DEC279;
+	line-height:1.8em;
+	padding-bottom:2em;
+	position:relative;
+	left:50%;
+	margin-left:-225px;
+}
+#dis-bh-orderdisplay {
+	width:650px;
+	border: 1px solid #DEC279;
+	line-height:1.8em;
+	padding-bottom:2em;
+	position:relative;
+	left:50%;
+	margin-left:-325px;
+}
+.dis-mainmenu {
+	border: 1px solid #DEC279;
+	width: 400px;
+	position:relative;
+	left:50%;
+	margin-left:-200px;
+	line-height:1.8em;
+	padding-bottom:1em;
+}
+#dis-orderform  {
+	width:800px;
+	margin:auto;
+	border: 1px solid #DEC279;
+	padding-bottom:2em;
+}
+.dis-orderform th {
+	padding-left: 1px;
+	padding-right: 1px;
+	text-align:center;
+}
+#displaylist {
+	width:580px;
+	margin:auto;
+	margin-top:.5em;
+}
+#bh-displaylist {
+	width:630px;
+	margin:auto;
+	margin-top:.5em;
+}
+#displaylist th {
+	padding-left: 1px;
+	padding-right: 1px;
+	text-align:left;
+	font-size:110%;
+}
+#displaylist table{
+	width:480px;
+	margin:auto;
+	margin-top:.5em;
+}
+#bh-displaylist th {
+	padding-left: 1px;
+	padding-right: 1px;
+	text-align:left;
+	font-size:110%;
+}
+#bh-displaylist table{
+	width:100%;
+	margin:auto;
+	margin-top:.5em;
+}
+#displaylistbuttons {
+	width:200px;
+}
+.dis-orderstatus {
+	width: 300px;
+	line-height:1.8em;
+	position:relative;
+	left:50%;
+	margin-left:-150px;
+	padding-top:2em;
+	text-align:center;
+	margin-top:3em;
+	border: 1px solid #DEC279;
+	padding-bottom:2em;
+}
+.dis-status, .dis-password {
+	width: 300px;
+	line-height:1.8em;
+	position:relative;
+	left:50%;
+	margin-left:-150px;
+	padding-top:2em;
+	text-align:center;
+	margin-top:3em;
+	border: 1px solid #DEC279;
+	padding-bottom:2em;
+}
+.dis-userselect,.dis-resetpwd {
+	width: 350px;
+	line-height:1.8em;
+	position:relative;
+	left:50%;
+	margin-left:-175px;
+	padding-top:2em;
+	text-align:center;
+	margin-top:3em;
+	border: 1px solid #DEC279;
+	padding-bottom:2em;
+}
+#Status div {
+	margin-top:1em;
+	margin-bottom:0;
+}
+#disabled {
+	background-color:white;
+	color:black;
+}
+#forgotPassword {
+	width: 300px;
+	padding-bottom:2em;
+}
+.CustomerInfo {
+	width:670px;
+	line-height:1.8em;
+	margin: auto;
+}
+.CustomerInfo input{
+	padding-top:.4em;
+}
+.CustomerInfo label{
+	width:7.1em;
+}
+.orderDisplay {
+	width:100%;
+}
+.OrderLogo {
+	max-height:300px;
+	max-width:400px;
+}
+label {
+	display:block;
+	float:left;
+	clear:left;
+    font-weight : bold; 
+	text-align: left;
+	padding-left:1.5em;
+}
+.LoginLabel {
+	width:6em;
+	vertical-align:middle;
+}
+.FormLabel {
+	width:9em;
+	padding-right:1em;
+}
+.LongLabel {
+	width:12em;
+}
+.BlockInput {
+	display:block;
+	float:left;
+}
+br {
+	clear:both;
+}
+.pagenumdead {
+			border:0px solid #FFFFFF;
+			color: #000000;
+			background-color: #FFFFFF;
+			margin:0px;
+			padding-left:2px;
+			padding-right:2px;
+			padding-bottom:0px;
+			padding-top:2px;
+			font-size:12px;
+			}
+.formheader {
+	font-size:larger;
+	font-weight:bold;
+	padding:4px;
+	text-align:center;
+}
+fieldset {
+       padding : 10px;
+       margin-bottom : 15px;
+}
+legend { font-weight : bold; }
+.ButtonSubmit {
+	display:block;
+	float:left;
+	margin: 1em;
+}
+.BH-ButtonSubmit {
+	display:block;
+	float:left;
+	margin: .6em .2em 0 .2em;
+}
+.actionButtons {
+	width:90%;
+}
+.actionButtons a.ButtonSubmit {
+	float:left;
+	border-style:outset;
+	border-width:2px;
+	background-color:#d4d0c8;
+	color:#000000;
+	height:12px;
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-bottom:6px;
+	vertical-align:middle;
+	text-decoration:none;
+}
+.actionButtons a.BH-ButtonSubmit {
+	float:left;
+	border-style:outset;
+	border-width:2px;
+	background-color:#d4d0c8;
+	color:#000000;
+	height:12px;
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-bottom:6px;
+	vertical-align:middle;
+	text-decoration:none;
+}
+.dis-menu .actionButtons {
+	width:250px;
+}
+#loginform .actionButtons {
+	width:150px;
+	padding-left:1.5em;
+}
+#OrderStatus .actionButtons {
+	width:150px;
+	padding-left:3em;
+}
+.wms-header {
+	margin-left: 1.3em;
+}
+.wms-footer {
+	text-align:center;
+	vertical-align:middle;
+	margin-bottom: 5em;
+}
+.validation-failed { /* for textboxes, textareas, passwords */
+	border:1px dashed #F33;
+	background-color:#FCC;
+}
+
+.validation-failed-cr { /* for checkboxes and radios */
+
+}
+
+.validation-failed-sel { /* for selects */
+	background-color:#FCC;
+}
+
+.validation-passed { /* for textboxes, textareas, passwords */
+}
+
+.validation-passed-cr { /* for checkboxes and radios */
+
+}
+
+.validation-passed-sel { /* for selects */
+
+}
+ol {
+	margin-left:1.5em;
+	padding-left:3.7em;
+	margin-bottom: 1em;
+	margin-top: 1em;
+}
+ol li {
+	margin-left:3em;
+	list-style-type:decimal;
+	text-align:left;
+}
+h4 {
+	text-align:center;
+}
+.CustomerInfo div {
+	width: 50%;
+	float:left;
+}
+.OrderColumn {
+	float:left;
+	width:47%;
+	padding-left:.75em;
+	margin-right:.5em;
+	line-height:1em;
+}
+#OrderForm td {
+}
+.OrderColumn table {
+	table-layout:fixed;
+}
+.OrderColumn th {
+	font-size:90%;
+	padding:3px;
+}
+.OrderColumn input {
+	vertical-align:middle;
+}
+.grid {
+	border:thin;
+	border-color:#00FF00;
+}
+.FormAutoFill {
+	border: 0 none;
+}
+input.FormAutoFill {
+	background-color:transparent;
+	color:#DEC279;
+	overflow:visible;
+}
+.inv-FormAutoFill {
+	border: 0 none;
+}
+input.inv-FormAutoFill {
+	background-color:transparent;
+	overflow:visible;
+}
+.EntryRow1 {
+	background-color:#DEC279;
+	color: #000;
+}
+.EntryRow0:hover {
+	color: #000;
+	background: #6699FF;
+}
+.EntryRow1:hover {
+	background: #6699FF;
+}
+.clear {
+	clear:both;
+}
+.dis-orderweight {
+	float:left;
+	text-align: left;
+	width:50%;
+	margin-top: 1em;
+}
+.dis-orderweight .FormAutoFill{
+	text-align: right;
+	font-weight: bold;
+}
+#main-content {
+	min-height: 300px;
+	max-height: none;
+}
+#mainWrapper{
+	width:950px;
+}
+.dis-comment {
+	text-align:left;
+	float:left;
+	margin-top:1em;
+}
+.dis-comment input{
+	float:left;
+	margin-left:2.4em;
+}
+.error {
+	width:100%;
+	text-align:center;
+	color:red;
+	font-weight:bold;
+	padding-bottom:.3em;
+}
+.numeric {
+	text-align:right;
+	margin-right:2em;
+	width:3em;
+}
+.ctcatn {
+	width:4em;
+}
+.housebutton a:hover {
+	background-color: #99aabf;
+	border-top: 2px #31557f solid;
+	border-left: 2px #31557f solid;
+	border-bottom: 2px #cce3ff solid;
+	border-right: 2px #cce3ff solid;
+}
+.WideSubmit {
+	padding:2px 5px;
+}
+input[disabled] {
+	background-color:silver;
+}
+#disclaimer {
+	text-align:left;
+	margin-left:1em;
+	margin-right:1em;
+	font-size:85%;
+	line-height:1.3em;
+}
+#forgotpassword {
+	width:100%;
+	text-align:center;
+	margin-top:1em;
+}
+#spb-message {
+	width:490px;
+	position:relative;
+	left:50%;
+	margin-left:-245px;
+	margin-top:50px;
+	color: #DEC279;
+}
+#dis-invoice {
+	margin:0;
+	padding-left: 20px;
+	background-color: white;
+	width: 8in;
+}
+#dis-invoice table {
+	border:none;
+	width:730px;
+}
+.inv-box {
+	border: 1px solid #DEC279;
+}
+td.inv-box {
+	    border: 1px solid #DEC279;
+		padding-left:.4em;
+		padding-right:.4em;
+}
+td.inv-nonbox {
+	    border: none;
+}
+td.inv-col {
+	    border-width: 0 1px;
+		border-style:solid;
+		border-color: #DEC279;
+}
+td.inv-col1 {
+	max-width:60px;
+}
+td.inv-brand-col {
+	min-width:400px;
+}
+.inv-numeric {
+	text-align:right;
+	padding-right:1em;
+}
+input.inv-numeric {
+	float:right;
+}
+#InvoiceForm.inv-numeric {
+	text-align:right;
+	padding:none;
+}
+dis-inv-Centered {
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	font-size:8.0pt;
+	vertical-align:text-top;
+}
+#dis-bol {
+	margin:0;
+	padding-left: 20px;
+	background-color: white;
+	width: 8in;
+}
+p.dis-bol-Normal {
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+}
+h2.dis-bol-h2 {
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	text-align:right;
+	font-size:10.0pt;
+	font-weight:normal;
+}
+h3.dis-bol-h3 {
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-weight:normal;
+}
+
+#dis-bol table {
+	width: 732px;
+	border-color: grey;
+}
+p.dis-bol-SectionTitle, li.dis-bol-SectionTitle, div.dis-bol-SectionTitle {
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	font-size:8.0pt;
+	text-transform:uppercase;
+	font-weight:bold;
+	border:solid gray 1.0pt;
+  border-top:none;
+}
+td.dis-bol-ThirdParty {
+	width:273.4pt;
+	border:solid gray 1.0pt;
+  border-top:none;
+  padding:.7pt 4.3pt .7pt 4.3pt;
+  height:.2in;
+}
+td.dis-bol-SpecialInstructions {
+	width:273.4pt;
+	border-top:none;
+	border-left:solid gray 1.0pt;
+	border-bottom:solid gray 1.0pt;
+	border-right:solid windowtext 1.0pt;
+	  padding:2.15pt 4.3pt 2.15pt 4.3pt;
+	  height:8.8pt;
+}
+.dis-bol-Section {
+	background:#CCCCCC;
+}
+td.dis-bol-PONumberBlank {
+	border:solid gray 1.0pt;
+  border-top:none;
+  padding:2.15pt 4.3pt 2.15pt 4.3pt;
+  height:24.45pt
+}
+td.dis-bol-CommodityDescription {
+	width:250.55pt;
+	border-top:none;
+  border-left:none;
+  border-bottom:solid gray 1.0pt;
+  border-right:solid gray 1.0pt;
+  padding:2.15pt 4.3pt 2.15pt 4.3pt;
+  height:8.8pt
+}
+td.dis-bol-Value {
+	width:295.9pt;border:none;
+  border-bottom:solid gray 1.0pt;
+  padding:.05in 4.3pt .05in 4.3pt;
+  height:8.8pt
+}
+td.dis-bol-CODAmount {
+	width:253.1pt;
+	border:none;
+	border-bottom:solid gray 1.0pt;
+  padding:.05in 4.3pt .05in 4.3pt;
+  height:8.8pt
+}
+td.dis-bol-Liability {
+	width:549.0pt;
+	border:solid gray 1.0pt;
+  border-top:none;
+  padding:2.15pt 4.3pt 2.15pt 4.3pt;
+  height:.15in
+}
+td.dis-bol-Received {
+	width:241.9pt;
+	border:solid gray 1.0pt;
+  border-top:none;
+  padding:2.15pt 4.3pt 2.15pt 4.3pt;
+  height:.5in
+}
+td.dis-bol-Shipper {
+	width:307.1pt;
+	border-top:none;
+	border-left:none;
+	border-bottom:solid gray 1.0pt;
+  border-right:solid gray 1.0pt;
+  padding:2.15pt 4.3pt 2.15pt 4.3pt;
+  height:.5in
+}
+td.dis-bol-SignatureDate {
+	width:170.8pt;
+	border:solid gray 1.0pt;
+  border-top:none;
+  padding:2.15pt 4.3pt 2.15pt 4.3pt;
+  height:53.5pt
+}
+td.dis-bol-TrailerLoaded {
+	width:71.1pt;
+	border-top:none;
+  border-left:none;
+  border-bottom:solid gray 1.0pt;
+  border-right:solid gray 1.0pt;
+  padding:2.15pt 4.3pt 2.15pt 4.3pt;
+  height:53.5pt
+}
+td.dis-bol-FreightCounted {
+	width:137.8pt;border-top:none;
+  border-left:none;
+  border-bottom:solid gray 1.0pt;
+  border-right:solid gray 1.0pt;
+  padding:2.15pt 4.3pt 2.15pt 4.3pt;
+  height:53.5pt
+}
+td.dis-bol-CarrierSignature {
+	width:169.3pt;
+	border-top:none;
+  border-left:none;
+  border-bottom:solid gray 1.0pt;
+  border-right:solid gray 1.0pt;
+  padding:2.15pt 4.3pt 2.15pt 4.3pt;
+  height:53.5pt
+}
+p.dis-bol-LineItem {
+	font-weight:bold;
+	text-align:center;
+}
+p.dis-bol-Bold {
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-weight:bold;
+}
+p.dis-bol-BoldCentered {
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	font-size:8.0pt;
+	font-weight:bold;
+}
+p.dis-bol-Centered {
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	font-size:8.0pt;
+	vertical-align:text-top;
+}
+p.dis-bol-FinePrint {
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:6.0pt;
+	line-height:11px;
+}
+span.dis-bol-FinePrintChar {
+	font-size:6.0pt;
+}
+p.dis-bol-Terms {
+	margin-top:2.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+}
+p.dis-bol-CheckBox, li.dis-bol-CheckBox, div.dis-bol-CheckBox{
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Wingdings;
+	color:#333333;
+	}
+p.dis-bol-SignatureHeading {
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:8.0pt;
+	font-weight:bold;
+}
+span.dis-bol-Carrier {
+	font-size:16.0pt;
+}
+span.dis-bol-ProNumber {
+	font-size:12.0pt;
+}
+span.dis-bol-CheckBoxChar
+{
+	color:#333333;
+}
+p.dis-bol-ShipperSignature, li.dis-bol-ShipperSignature, div.dis-bol-ShipperSignature {
+	margin-top:2.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-weight:bold;
+}
+.dis-bol-blue {
+	color:blue;
+}
+table.dis-bol-NormalTable {
+	font-size:10.0pt;
+}
+td.dis-bol-Format {
+	border:solid gray 1.0pt;
+	padding:.7pt 4.3pt .7pt 4.3pt;
+	height:23.05pt
+}
+span.dis-bol-Data {
+	font-size:12.0pt;
+}
+td.dis-bol-loaded {
+	width:71.1pt;
+	border-top:none;
+  border-left:none;
+  border-bottom:solid gray 1.0pt;
+  border-right:solid gray 1.0pt;
+  padding:2.15pt 4.3pt 2.15pt 4.3pt;
+  height:53.5pt;
+}
+p.dis-bol-Terms, li.dis-bol-Terms, div.dis-bol-Terms {
+	margin-top:2.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+}
+.dis-total {
+	border-top:medium;
+	border-color:black;
+}
+.dis-inv-Small-Label {
+	font-size:9px;
+}
+.dis-orordn-Class {
+	width:86px;
+	text-align:center;
+}
+.dis-ordisn-Class {
+	width:86px;
+	text-align:center;
+}
+.dis-orordt-Class {
+	width:86px;
+	text-align:center;
+}
+.dis-orrqdt-Class {
+	width:86px;
+	text-align:center;
+}
+.dis-orpono-Class {
+	width:86px;
+	text-align:center;
+}
+.dis-StatusDescription-Class {
+	width:86px;
+	text-align:center;
+}
+.dis-bolinvbutton-Class {
+	width:113px;
+	text-align:center;
+}
+.cust-login {
+	left:25%;
+}

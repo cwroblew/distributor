@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Contractor Orders</title>
+	<base href="{BASE_URL}/" />
+		<link rel="stylesheet" href="client url /foxypress/style.css">
+	<link rel="stylesheet" href="client url /style.css" type="text/css" media="screen">
+	<script language="javascript" src="js/yui/build/yahoo-dom-event/yahoo-dom-event.js" type="text/javascript"></script>
+	<script language="javascript" src="js/js_validate_yui/jsvalidate.js" type="text/javascript"></script>
+	<script language="javascript" src="js/js_validate_yui/validateinvoice.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	function displayComment (commentId)
+	{
+		var comment = document.getElementById(commentId);
+		// alert ("ID: "+noteId+" Name: "+note.name+", "+note.id+" Contact Note URL: "+note.style.display);
+		if (comment.style.display == "none")
+		{
+			comment.style.display = "";
+		}
+		else
+			comment.style.display = "none";
+ 	}
+	function goto_url(url) 
+	{//v1.0
+		alert (url);
+		window.location.replace(url);
+	}
+	</script>
+	<link href="css/wms-styles.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="css/wms-print-styles.css" rel="stylesheet" type="text/css" media="print"/>
+</head>
+<body>
+	<div id="spb-shell">
+	{ManageContent}
+	</div>
+</body>
+</html>

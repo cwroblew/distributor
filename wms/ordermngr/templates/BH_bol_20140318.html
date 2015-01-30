@@ -1,0 +1,293 @@
+<div id="dis-bol">
+	<form name="BOLForm" action="{APP_PATH}/{APP_NAME}" method="post" id="BOLForm">
+		<input name="orordn" type="hidden" value="{orordn}" />
+		<input name="cmd" type="hidden" value="" />
+<table width="90%" border="1" class="dis-bol-NormalTable">
+     <tr>
+     	<td width=128 colspan=3 class="dis-bol-Format">
+        	<h3 class="dis-bol-h3 dis-bol-blue"><span>Date:</span><br /><span>{orordt}</span></h3>
+        </td>
+        <td width=434 colspan=8>
+        	<h3 class="dis-bol-h3"><p class="dis-bol-Normal dis-bol-Centered">Non-Negotiable</p></h3>
+        </td>
+        <td width=169 colspan=3>
+        	<h2 class="dis-bol-h2"><img src="{IMAGE_PATH}/{BHLogo}" width="150"/></h2>
+        </td>
+    </tr>
+    <tr>
+    	<td width=365 colspan=8 class="dis-bol-Section">
+        	<p class="dis-bol-SectionTitle">CARRIER NAME</p>
+        </td>
+        <td width=367 colspan=6 class="dis-bol-Section">
+        	<p class="dis-bol-SectionTitle">SCAC: ODFL</p>
+        </td>
+    </tr>
+    <tr>
+    	<td width=365 colspan=8>
+        	<p class="dis-bol-LineItem"><span class="dis-bol-Carrier">{CarrierName}</span></p>
+        </td>
+        <td width=367 colspan=6>
+        	<p class="dis-bol-Bold dis-bol-blue"><span class="dis-bol-ProNumber">PRO NUMBER:</span></p>
+        	<p class="dis-bol-Bold dis-bol-blue">{ProNumber}</p>
+        	<p class="dis-bol-Bold dis-bol-blue">&nbsp;</p>
+        </td>
+    </tr>
+     <tr>
+    	<td width=365 colspan=8 class="dis-bol-Section">
+        	<p class="dis-bol-SectionTitle">SHIPPER</p>
+        </td>
+        <td width=367 colspan=6 class="dis-bol-Section">
+        	<p class="dis-bol-SectionTitle">CONSIGNEE</p>
+        </td>
+    </tr>
+     <tr>
+    	<td width=365 colspan=8>
+        	<p class="dis-bol-Bold"><span class="dis-bol-Data">Berghoff Brewery Warehouse<br />
+4800 Industrial Park Rd.<br />Stevens Point, WI   54481</span></p></td>
+        <td width=367 colspan=6>
+        	<p class="dis-bol-Normal"><span class="dis-bol-Data">{ShipTo}</span></p>
+        </td>
+    </tr>
+     <tr>
+    	<td width=365 colspan=8 class="dis-bol-Section dis-bol-ThirdParty ">
+        	<p class="dis-bol-SectionTitle">Third Party Freight
+  Charges Bill to</p>
+        </td>
+        <td width=367 colspan=6 class="dis-bol-Section">
+        	<p class="dis-bol-Bold">PO# {orpono}</p>
+        </td>
+    </tr>
+     <tr>
+    	<td width=365 colspan=8 class="dis-bol-PONumberBlank">
+        	<p class="dis-bol-LineItem">&nbsp;</p>
+        </td>
+        <td width=367 colspan=6>
+        	<p class="dis-bol-Bold">Seal# {SealNumber}</p>
+        	<p class="dis-bol-Bold">&nbsp;</p>
+        	<p class="dis-bol-Bold">Trailer# {TrailerNumber}</p>
+        </td>
+    </tr>
+     <tr>
+    	<td width=365 colspan=8 class="dis-bol-SpecialInstructions">
+        	<p class="dis-bol-Bold">Special Instructions:</p>
+        	<p class="dis-bol-Bold">_{SpecialInstructions}</p>
+        </td>
+        <td width=367 colspan=6>
+        	<p class="dis-bol-Bold">Freight Charge Terms
+        	<span class="dis-bol-FinePrintChar">(Freight charges are prepaid unless
+  marked otherwise):</span></p>
+        	<p class="dis-bol-Terms">Prepaid <span class=dis-bol-CheckBoxChar>&#9744;</span> Collect <span class=dis-bol-CheckBoxChar>&#9744;</span> 3rd Party <span class=dis-bol-CheckBoxChar>&#9744;</span></p>
+	       	<p class="dis-bol-Normal">Master bill of lading with attached underlying
+  bills of lading.</p>
+        </td>
+    </tr>
+     <tr>
+    	<td width=732 colspan=14 class="dis-bol-Section">
+        	<p class="dis-bol-SectionTitle">Carrier Information</p>
+        </td>
+    </tr>
+     <tr>
+    	<td width=91 colspan=2>
+        	<p class="dis-bol-BoldCentered">Handling Unit</p>
+        </td>
+     	<td width=91 colspan=2>
+        	<p class="dis-bol-BoldCentered">Package</p>
+        </td>
+       <td width=424 colspan=8>
+        	<p class="dis-bol-BoldCentered">&nbsp;</p>
+        </td>
+     	<td width=125 colspan=2>
+        	<p class="dis-bol-BoldCentered">LTL Only</p>
+        </td>
+    </tr>
+    <tr>
+    	<td  width=37>
+        	<p class="dis-bol-Centered">Qty</p>
+        </td>
+    	<td  width=55>
+        	<p class="dis-bol-Centered">Type</p>
+        </td>
+    	<td  width=37>
+        	<p class="dis-bol-Centered">Qty</p>
+        </td>
+    	<td  width=55>
+        	<p class="dis-bol-Centered">Type</p>
+        </td>
+    	<td  width=45>
+        	<p class="dis-bol-Centered">Weight</p>
+        </td>
+    	<td  width=45>
+        	<p class="dis-bol-Centered">HM (X)</p>
+        </td>
+    	<td  width=334 colspan=6 class="dis-bol-CommodityDescription">
+        	<p class="dis-bol-Bold">Commodity Description</p>
+            <p class="dis-bol-FinePrint">Commodities requiring special or additional care or attention in handling or stowing must be so marked and packaged as to ensure safe transportation with ordinary care. See Section 2(e) of NMFC item 360</p>
+        </td>
+    	<td  width=63>
+        	<p class="dis-bol-Centered">NMFC No.</p>
+        </td>
+    	<td  width=63>
+        	<p class="dis-bol-Centered">Class</p>
+        </td>
+    </tr>
+    <!-- BEGIN orderItemBlock -->
+    <tr>
+    	<td  width=37>
+        	<p class="dis-bol-Centered">{HUQuantity}</p>
+        </td>
+    	<td  width=55>
+        	<p class="dis-bol-Centered">{HUType}</p>
+        </td>
+    	<td  width=37>
+        	<p class="dis-bol-Centered">{PKGQuantity}</p>
+        </td>
+    	<td  width=55>
+        	<p class="dis-bol-Centered">{PKGType}</p>
+        </td>
+    	<td  width=45>
+        	<p class="dis-bol-Centered">{Weight}</p>
+        </td>
+    	<td  width=45>
+        	<p class="dis-bol-Centered">{HM}</p>
+        </td>
+    	<td  width=334 colspan=6>
+        	<p class="dis-bol-Normal">{Description}</p>
+        </td>
+    	<td  width=63>
+        	<p class="dis-bol-Centered">{NMFCNo}</p>
+        </td>
+    	<td  width=63>
+        	<p class="dis-bol-Centered">{Class}</p>
+        </td>
+    </tr>
+    <!-- END orderItemBlock -->
+    <tr>
+    	<td  width=37>
+        	<p class="dis-bol-Centered">&nbsp;</p>
+        </td>
+    	<td  width=55>
+        	<p class="dis-bol-Centered">&nbsp;</p>
+        </td>
+    	<td  width=37>
+        	<p class="dis-bol-Centered">&nbsp;</p>
+        </td>
+    	<td  width=55>
+        	<p class="dis-bol-Centered">&nbsp;</p>
+        </td>
+    	<td  width=45>
+        	<p class="dis-bol-Centered">&nbsp;</p>
+        </td>
+    	<td  width=45>
+        	<p class="dis-bol-Centered">&nbsp;</p>
+        </td>
+    	<td  width=334 colspan=6>
+        	<p class="dis-bol-Normal">&nbsp;</p>
+        </td>
+    	<td  width=63>
+        	<p class="dis-bol-Centered">&nbsp;</p>
+        </td>
+    	<td  width=63>
+        	<p class="dis-bol-Centered">&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+    	<td  width=37>
+        	<p class="dis-bol-Centered dis-total">{TotalHUQuantity}</p>
+        </td>
+    	<td  width=55>
+        	<p class="dis-bol-Centered dis-total">{TotalHUType}</p>
+        </td>
+    	<td  width=37>
+        	<p class="dis-bol-Centered dis-total">{TotalPKGQuantity}</p>
+        </td>
+    	<td  width=55>
+        	<p class="dis-bol-Centered dis-total">{TotalPKGType}</p>
+        </td>
+    	<td  width=45>
+        	<p class="dis-bol-Centered dis-total">{TotalWeight}</p>
+        </td>
+    	<td  width=45>
+        	<p class="dis-bol-Centered">&nbsp;</p>
+        </td>
+    	<td  width=334 colspan=6>
+        	<p class="dis-bol-Normal">&nbsp;</p>
+        </td>
+    	<td  width=63>
+        	<p class="dis-bol-Centered">&nbsp;</p>
+        </td>
+    	<td  width=63>
+        	<p class="dis-bol-Centered">&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+    	<td width=395 colspan=9 class="dis-bol-Value">
+        	<p class="dis-bol-FinePrint">Where the rate is
+  dependent on value, shippers are required to state specifically in writing
+  the agreed or declared value of the property as follows: "The agreed or
+  declared value of the property is specifically stated by the shipper to be
+  not exceeding<span> _______________</span> per <span> _______________</span></p>
+        </td>
+        <td width=337 colspan=5 class="td.dis-bol-CODAmount">
+        	<p class="dis-bol-Bold">COD Amount: $<span>_______________________________________________</span> </p>
+            <p class="dis-bol-Terms">Fee terms: Collect <span
+  class=dis-bol-CheckBoxChar>&#9744;</span> Prepaid <span
+  class=dis-bol-CheckBoxChar>&#9744;</span> Customer
+  check acceptable <span
+  class=dis-bol-CheckBoxChar>&#9744;</span> </p>
+        </td>
+    </tr>
+    <tr>
+    	<td width=732 colspan=14 class="dis-bol-Liability">
+        	<p class="dis-bol-BoldCentered">Note: Liability
+  limitation for loss or damage in this shipment may be applicable. See 49 USC
+  § 14706(c<span class=GramE>)(</span>1)(A) and (B).</p>
+        </td>
+    </tr>
+    <tr>
+    	<td width=323 colspan=7 class="dis-bol-Received">
+        	<p class="dis-bol-FinePrint">Received, subject to individually determined rates or contracts that have been agreed upon in writing between the carrier and shipper, if applicable, otherwise to the rates, classifications, and rules that have been established by the carrier and are available to the shipper, on request, and to all applicable state and federal regulations.</p>
+        </td>
+    	<td width=409 colspan=7 class="dis-bol-Shipper">
+        	<p class="">The carrier shall not make delivery of this shipment without payment of charges and all other lawful fees.</p>
+            <p class="dis-bol-ShipperSignature">Shipper Signature __________________________________________________________ </p>
+        </td>    
+    </tr>
+    <tr>
+    	<td width=228 colspan=5  valign=top class="dis-bol-SignatureDate">
+        	<p class="dis-bol-SignatureHeading">Shipper Signature/Date</p>
+            <p class="dis-bol-Bold">___________________________________________</p>
+            <p class="dis-bol-FinePrint">This is to certify that the above named materials are properly classified, packaged, marked, and labeled, and are in proper condition for transportation according to the applicable regulations of the DOT.</p>
+        </td>
+        <td width=95 colspan=2 class="dis-bol-TrailerLoaded">
+        	<p class="dis-bol-Bold dis-bol-loaded">Trailer Loaded:</p>
+            <p class=""><span class="dis-bol-CheckBoxChar">&#9744;</span> By shipper</p>
+            <p class=""><span class="dis-bol-CheckBoxChar">&#9744;</span> By driver</p>
+        </td>
+        <td width=184 colspan=3 class="dis-bol-FreightCounted">
+        	<p class="dis-bol-Bold">Freight Counted:</p>
+            <p class=""><span class="dis-bol-CheckBoxChar">&#9744;</span> By shipper</p>
+            <p class=""><span class="dis-bol-CheckBoxChar">&#9744;</span> By driver/pallets said to contain</p>
+            <p class=""><span class="dis-bol-CheckBoxChar">&#9744;</span> By driver/pieces</p>
+        </td>
+        <td width=226 colspan=4 class="dis-bol-CarrierSignature">
+        	<p class="dis-bol-SignatureHeading">Carrier Signature/Pickup Date</p>
+            <p class="dis-bol-Bold">__________________________________________</p>
+            <p class="dis-bol-FinePrint">Carrier acknowledges receipt of packages and required placards. Carrier certifies emergency response information was made available and/or carrier has the DOT emergency response guidebook or equivalent documentation in the vehicle. Property described above is received in good order, except as noted.</p>
+        </td>
+    </tr>
+</table>
+<div class="actionButtons" id="OrderPushButtons">
+	<input name="print" type="button" value="Print BOL" onclick="printpage()"  class="ButtonSubmit" {DisableSubmitButton}/>
+	<a href="{APP_PATH}/{APP_NAME}" class="ButtonSubmit">Exit</a>
+</div>
+</form>
+</div>
+<script>
+ function printpage()
+   {
+   window.print();
+   var frm = document.getElementById("BOLForm");
+   frm.cmd.value = "emailbol";
+   frm.submit();
+   }
+ </script>

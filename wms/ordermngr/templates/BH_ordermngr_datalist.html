@@ -1,0 +1,45 @@
+<!-- BEGIN contentBlock -->
+<div id="dis-bh-orderdisplay">
+	<form name="orderDisplay" action="{APP_PATH}/{APP_NAME}" method="post" id="orderDisplay">
+		<input name="DisplayChanged" type="hidden" id="DisplayChanged" value="N" />
+		<input name="DescriptionTypeChanged" type="hidden" id="DescriptionTypeChanged" value="N" />
+		<input name="PageNumber" type="hidden" id="PageNumber" value="{PageNumber}" />
+		<p align="center" class="formheader">{DistributorName} Orders</p>
+		<div class="buttons">
+			<!-- BEGIN buttonBlock -->
+			<input type="submit" name="cmd" value="{Button}" />
+			<!-- END buttonBlock -->
+		</div>
+		<table id="bh-displaylist">
+			<thead>
+				<tr>
+					<!-- BEGIN headerColumnBlock -->
+					<th><a href="{APP_PATH}/{APP_NAME}?sortby={FieldName}&desc={Sort}&cmd=display">{ColumnName}</a></th>
+					<!-- END headerColumnBlock -->
+                    <th>{ButtonHeader}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- BEGIN orderEntriesBlock -->
+				<tr>
+                	<td colspan="{NumberColumns}"><div onclick="goto_url('{APP_PATH}/{APP_NAME}?cmd=modify&amp;orordn={orordn}&amp;rnd={RND}')" class='EntryRow{row}'>
+                    <table><tr>
+					<!-- BEGIN dataColumnBlock -->
+					<td>{ColumnData}</td>
+					<!-- END dataColumnBlock -->
+                    </tr></table>
+                    </div></td>
+                    <td width="{ButtonWidth}" class="displaylistbuttons">
+                    	<div class="actionButtons" align="center">{RowButtons}</div>
+                    </td>
+				</tr>
+				<!-- END orderEntriesBlock -->
+			</tbody>
+		</table>
+		{PageLinks}
+		<div class="actionButtons" align="center">
+			<a href="{APP_DIR}/{HOME_APP}" class="ButtonSubmit" {DisableMainButton}>Exit</a>
+		</div>
+	</form>
+</div>
+<!-- END contentBlock -->

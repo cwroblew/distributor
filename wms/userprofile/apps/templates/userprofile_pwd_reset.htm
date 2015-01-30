@@ -1,0 +1,19 @@
+<!-- BEGIN contentBlock -->
+<div class="dis-content dis-resetpwd">
+	<form id="newpasswordform" method="post" action="{APP_PATH}/{APP_NAME}">
+	  <input type="hidden" name="user" value="{login}" />
+	  <input name="cmd" type="hidden" id="cmd" value="modify" />
+	  <input name="step" type="hidden" id="step" value="4" />
+                    <input type=hidden name="login" value="{USER_ID}" />
+                    <input type=hidden name="chk" value="{CHECKSUM}" />
+		<div class="SPBForm">
+			<p align="center" class="formheader">New Password</p>
+			<label for="password" class="FormLabel">New Password:</label> <input type="password" name="password1" /><br />
+			<label for="ConfirmPassword" class="FormLabel">Confirm:</label> <input type="password" name="password2" /><br /><br />
+			<input type="submit" name="Submit" value="Change Password" class="ButtonSubmit" />
+		</div>
+		<p>&nbsp;</p>
+	</form>
+</div>
+<br class="clear" />
+<!-- END contentBlock -->

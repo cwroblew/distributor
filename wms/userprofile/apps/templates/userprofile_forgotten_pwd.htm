@@ -1,0 +1,21 @@
+<!-- BEGIN contentBlock -->
+<div class="dis-content dis-password">
+	<form name="forgotPassword" method="post" action="{APP_PATH}/{APP_NAME}" id="forgotPassword">
+		<input name="cmd" type="hidden" id="cmd" value="{ACTION}" />
+		 <input type="hidden" name="step" value="2" />
+		<p align="center" class="formheader">Forgot Password</p>
+		<div class="SPBForm">
+			<p align="center"><label for="">Email Address:&nbsp;</label>
+			<input type="text" name="Email" value="{Email}" title="A valid email address is required" class="required validate-email" /></p>
+		</div>
+		<br /><br class="clear" />
+		<div class="actionButtons" align="center">
+			<input type="submit" name="Submit" value="Submit" class="ButtonSubmit" />
+		</div>
+	</form>
+</div>
+<br class="clear" />
+<script type="text/javascript">
+	YAHOO.util.Event.onDOMReady (attachToForms);
+</script>
+<!-- END contentBlock -->

@@ -1,0 +1,35 @@
+<!-- BEGIN contentBlock -->
+<div class="dis-content dis-profile">
+	<form id="profileform" action="{APP_PATH}/{APP_NAME}" method="post">
+		<input name="cmd" type="hidden" value="{cmd}" />
+		<input name="step" type="hidden" value="2" />
+		<p align="center" class="formheader">Distributor/Customer Profile</p>
+		<div class="SPBForm">
+			<label for="dsdisn" class="FormLabel">Customer: </label>
+			<input name="dsdisn" type="text" value="{dsdisn}" size="10" class="FormAutoFill" /><br />
+			<label for="dsname" class="FormLabel">Name: </label>
+			<input name="dsname" type="text" value="{dsname}" size="30" class="FormAutoFill" /><br />
+			<label for="dsemal" class="FormLabel">Email: </label>
+			<input name="dsemal" type="text" value="{dsemal}" size="30" title="A valid email address is required" class="required validate-email"  /><br />
+			<label for="dscont" class="FormLabel">Contact: </label>
+			<input name="dscont" type="text" value="{dscont}" size="20" maxlength="15" /><br />
+			<label for="dsphon" class="FormLabel">Phone: </label>
+			<input name="dsphon" type="text" value="{dsphon}" size="15" /><br />
+			<label for="dsfaxn" class="FormLabel">Fax: </label>
+			<input name="dsfaxn" type="text" value="{dsfaxn}" size="15" /><br /><br />
+			<label for="Password" class="FormLabel">Password: </label>
+			<input name="Password" type="password" value="{Password}" size="15" maxlength="50" /><br />
+			<label for="PasswordConfirm" class="FormLabel">Confirm: </label>
+			<input name="PasswordConfirm" type="password" value="{PasswordConfirm}" size="15" maxlength="50" /><br />
+		</div>
+		<div class="actionButtons" align="center">
+			<input name="Submit" type="submit" value="Save" class="ButtonSubmit" /> 
+			<a href="{APP_DIR}/{HOME_APP}?cancel=y" class="ButtonSubmit">Cancel</a>
+			<input name="Reset" type="reset" value="Clear Changes" class="ButtonSubmit" id="Reset" />
+		</div>
+	</form>
+</div>
+<script type="text/javascript">
+	YAHOO.util.Event.onDOMReady (attachToForms);
+</script>
+<!-- END contentBlock -->

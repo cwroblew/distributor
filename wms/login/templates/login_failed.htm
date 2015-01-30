@@ -1,0 +1,41 @@
+<!-- BEGIN contentBlock -->
+<div align="center" class="whitelabelform">
+	<form id="loginform" action="{APP_PATH}/{APP_NAME}" method="post">
+		<input name="AppRedirect" type="hidden" id="{AppRedirect}" />
+		<p align="center" class="formheader">Login Failed - ReEnter</p>
+		<input name="Error" type="hidden" id="{Error}" />
+		<input type=hidden name="url" value="{REDIRECT_URL}" />
+		<table border="0" width="250" cellpadding="5" style="border-style:solid; border-width:1px; border-collapse: collapse; border-color:#2B5D89; padding-left:4px; padding-right:4px; padding-top:1px; padding-bottom:1px" id="AutoNumber6">
+			<tr>
+				<td width="37" height="19">
+					<label for="username">Username</label>
+				</td>
+				<td width="209" height="19">
+					<input name="username" id="username"size="38" class="greyforminput" />
+				</td>
+			</tr>
+			<tr>
+				<td width="37" height="19">
+					<label for="password">Password</label>
+				</td>
+				<td width="209" height="19">
+					<input type="password" name="password" id="password" size="38" class="greyforminput" />
+				</td>
+			</tr>
+			<tr>
+				<td width="37" height="9" align="right"><input name="ForgotPW" type="checkbox" value="Y" /></td>
+				<td>Forgot your password</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<p align="center">
+						<input name="Reset" type="reset" id="Reset" value="Clear" class="greyforminput" />
+						&nbsp; 
+						<input name="Submit" type="submit" id="Submit" value="Login" class="greyforminput" />
+					</p>
+				</td>
+			</tr>
+		</table>
+	</form>
+</div>
+<!-- END contentBlock -->

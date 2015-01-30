@@ -1,0 +1,22 @@
+<!-- BEGIN contentBlock -->
+<div class="dis-content dis-userselect">
+	<form id="orderSelectDistributor" method="post" action="{APP_PATH}/{APP_NAME}" id="orderSelectDistributor">
+		<input name="cmd" type="hidden" value="selectuser" />
+		<input name="step" type="hidden" value="2" />
+			<div class="SPBForm">
+				<p class="formheader">Please select the Ship-to Distributor for this order</p>
+				<label for="SelectDistributor"> Distributor </label>
+				<select name="SelectDistributor" class="formSelect formBox">
+				<!-- BEGIN distributorBlock -->
+				<option value="{dsdisn}">{Distributor}</option>
+				<!-- END distributorBlock -->
+				</select>
+				
+			<div class="actionButtons dis-shortButtons" align="center">
+				<input name="Submit" type="submit" value="Select" class="ButtonSubmit" />
+			</div>
+			</div>
+	 </form>
+ </div>
+ <br class="clear" />
+<!-- END contentBlock -->

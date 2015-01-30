@@ -1,0 +1,37 @@
+<!-- BEGIN contentBlock -->
+<div id="dis-orderdisplay">
+	<form name="orderDisplay" action="http://pointbeer.com/dis_distributor/wms/mainmenu/mainmenu.php" method="post" id="orderDisplay">
+		<input name="DisplayChanged" type="hidden" id="DisplayChanged" value="N" />
+		<input name="DescriptionTypeChanged" type="hidden" id="DescriptionTypeChanged" value="N" />
+		<input name="PageNumber" type="hidden" id="PageNumber" value="{PageNumber}" />
+		<p align="center" class="formheader">{DistributorName} Orders</p>
+		<div class="buttons">
+			<!-- BEGIN buttonBlock -->
+			<input type="submit" name="cmd" value="{Button}" />
+			<!-- END buttonBlock -->
+		</div>
+		<table id="displaylist">
+			<thead>
+				<tr>
+					<!-- BEGIN headerColumnBlock -->
+					<th><a href="{APP_PATH}/{APP_NAME}?sortby={FieldName}&desc={Sort}&cmd=display">{ColumnName}</a></th>
+					<!-- END headerColumnBlock -->
+				</tr>
+			</thead>
+			<tbody>
+				<!-- BEGIN orderEntriesBlock -->
+				<tr class="EntryRow{row}" onclick="goto_url('{APP_PATH}/{APP_NAME}?cmd=modify&amp;orordn={orordn}&amp;rnd={RND}')">
+					<!-- BEGIN dataColumnBlock -->
+					<td>{ColumnData}</td>
+					<!-- END dataColumnBlock -->
+				</tr>
+				<!-- END orderEntriesBlock -->
+			</tbody>
+		</table>
+		{PageLinks}
+		<div class="actionButtons" align="center">
+			<input name="Exit" type="submit" value="Exit" class="ButtonSubmit" />
+		</div>
+	</form>
+</div>
+<!-- END contentBlock -->

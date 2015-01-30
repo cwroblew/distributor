@@ -1,0 +1,96 @@
+<div id="dis-invoice">
+	<form name="InvoiceForm" action="{APP_PATH}/{APP_NAME}" method="post" id="InvoiceForm">
+		<input name="orordn" type="hidden" value="{orordn}" />
+<table width="90%">
+    <tr>
+        <td colspan="2" rowspan="3" class="inv-nonbox"><img src="{IMAGE_PATH}/{BHLogo}" alt="Logo goes here" width="100" /></td>
+        <td colspan="5" rowspan="3" class="inv-nonbox">Remit To:<br />{ParentDistributorInfo}<br /><br /></td>
+        <td colspan="2" class="inv-box"><span>Customer #{ordisn}</span></td>
+        <td class="inv-box"><span>Page {InvoicePage}</span></td>
+    </tr>
+    <tr>
+        <td colspan="3" class="inv-box"><span>Date: {orordt}</span></td>
+        </tr>
+    <tr>
+        <td colspan="3"  class="inv-box"><span>Invoice #{InvoiceNo}</span></td>
+        </tr>
+   <tr>
+        <td rowspan="3" class="inv-nonbox">Sold To:</td>
+        <td colspan="3" rowspan="3" class="inv-nonbox">{SoldTo}<br /><br /></td>
+        <td colspan="1" rowspan="3" class="inv-nonbox">Ship To:</td>
+        <td colspan="2" rowspan="3" class="inv-nonbox">{ShipTo}<br /><br /></td>
+        <td colspan="3"  class="inv-box"><span>Order #{orordn}</span></td>
+        </tr>
+     <tr>
+        <td colspan="3" class="inv-box"><span>P.O. #{orpono}</span></td>
+        </tr>
+    <tr>
+        <td colspan="3" class="inv-box"><span>Bill of Lading </span></td>
+        </tr>
+    <tr class="inv-box">
+        <td class="inv-box">Terms<br />
+        Net 15 Days</td>
+        <td colspan="2" class="inv-box">F.O.B.<br />
+        Stevens Point</td>
+        <td colspan="2" class="inv-box">Shipped From<br />Steven's Point</td>
+        <td colspan="3" class="inv-box">Prepaid or Collect<br />{PrepaidCollect}</td>
+        <td class="inv-box">Ship Via<br />{ShipVia}</td>
+        <td class="inv-box">Car or Truck #<br />{CarTruckNo}</td>
+    </tr>
+    <tr class="inv-box">
+        <td class="inv-box inv-col1">Quantity Shipped</td>
+        <td class="inv-box">Description</td>
+        <td class="inv-box">U.P.C.</td>
+        <td colspan="5" class="inv-box inv-brand-col" width="500px">Brand Code</td>
+        <td class="inv-box inv-col1">Price</td>
+        <td class="inv-box inv-col1">Amount</td>
+    </tr>
+    <!-- BEGIN orderItemBlock -->
+    <tr>
+        <td class="inv-col inv-numeric">{oroqty}</td>
+        <td class="inv-col">{ProductSize}</td>
+        <td class="inv-col">{orcatn}</td>
+        <td colspan="5" class="inv-col">{Description}</td>
+        <td class="inv-col inv-numeric">{Price}</td>
+        <td class="inv-col inv-numeric">{Amount}</td>
+    </tr>
+    <!-- END orderItemBlock -->
+     <tr>
+        <td class="inv-col"><input name="palqty" type="text" value="{palqty}" class="required oroqty  inv-numeric" /></td>
+        <td class="inv-col">{ProductSize}</td>
+        <td class="inv-col">{orcatn}</td>
+        <td colspan="5" class="inv-col">Pallets</td>
+        <td class="inv-col"><input name="PalletCost" type="text" value="10.00" readonly="readonly" class="inv-FormAutoFill {ExtraClasses} inv-numeric" id="PalletCost" tabindex="-1" /></td>
+        <td class="inv-col"><input name="PalletAmount" type="text" value="{PalletAmount}" class="inv-FormAutoFill {ExtraClasses} inv-numeric" id="PalletAmount" tabindex="-1" /></td>
+    </tr>
+   <tr>
+        <td colspan="10">&nbsp;</td>
+        </tr>
+   <tr>
+        <td colspan="8" rowspan="2"><div class="actionButtons" id="OrderPushButtons">
+	<input name="Recalculate" type="button" value="Recalculate" onclick="addInvoicePallets()"  class="ButtonSubmit" {DisableSubmitButton}/></div>&nbsp;</td>
+        <td class="inv-box"><span>Total Weight</span></td>
+        <td class="inv-box"><span>Pay This Amount</span></td>
+        </tr>
+    <tr>
+       <td class="inv-box inv-numeric"><span>{TotalWeight}</span></td>
+        <td class="inv-box"><span><input name="TotalPrice" type="text" value="{TotalPrice}" class="inv-FormAutoFill {ExtraClasses} inv-numeric" id="TotalPrice" tabindex="-1" /><input name="OrigTotalPrice" type="hidden" value="{TotalPrice}" /></span></td>
+    </tr>
+</table>
+<div class="actionButtons" id="OrderPushButtons">
+	<input name="print" type="button" value="Print Invoice" onclick="printpage()"  class="ButtonSubmit" {DisableSubmitButton}/>
+	<a href="{APP_PATH}/{APP_NAME}?cmd=email&orordn={orordn}" class="ButtonSubmit" {DisableDeleteButton} id="EmailInvoice">Email Invoice</a>	
+	<a href="{APP_PATH}/{APP_NAME}" class="ButtonSubmit">Exit</a>
+</div>
+</form>
+</div>
+<script>
+ function printpage()
+   {
+   window.print()
+   }
+ </script>
+<script type="text/javascript">
+	YAHOO.util.Event.onDOMReady (attachDOMReady); // IE appears to have a problem with this
+	// YAHOO.util.Event.addListener(window, "load", attachDOMReady); 
+</script>

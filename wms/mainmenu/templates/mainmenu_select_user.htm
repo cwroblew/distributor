@@ -1,0 +1,22 @@
+<!-- BEGIN contentBlock -->
+<div class="dis-content dis-userselect">
+	<form id="Status" method="post" action="{RETURN_URL}">
+		<input name="cmd" type="hidden" value="selectuser" />
+		<input name="step" type="hidden" value="2" />
+			<div class="SPBForm">
+				<p class="formheader">SPB Administration</p>
+				<label for="SelectDistributor"> Distributor </label>
+				<select name="SelectDistributor" class="formSelect formBox">
+				<!-- BEGIN distributorBlock -->
+				<option value="{dsdisn}">{Distributor}</option>
+				<!-- END distributorBlock -->
+				</select>
+				
+			<div class="actionButtons dis-shortButtons" align="center">
+				<input name="Submit" type="submit" value="Select" class="ButtonSubmit" />
+			</div>
+			</div>
+	 </form>
+ </div>
+ <br class="clear" />
+<!-- END contentBlock -->

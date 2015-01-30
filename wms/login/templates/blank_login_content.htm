@@ -1,0 +1,23 @@
+<!-- BEGIN contentBlock -->
+<div id="">
+	<div class="pln-content dis-login">
+		<form id="loginform" action="{APP_PATH}/{APP_NAME}" method="post">
+			<input name="AppRedirect" type="hidden" value="{AppRedirect}" id="AppRedirect" />
+			<input name="Error" type="hidden" value="{Error}" id="Error" />
+			<input type=hidden name="url" value="{REDIRECT_URL}" />
+			<div class="SPBForm">
+				<p align="center" class="formheader">Login</p>
+				<div class="error">{Error}</div>
+				<label for="username" class="LoginLabel">Username</label>
+				<input name="username" id="username" size="15" /><br />
+				<label for="password" class="LoginLabel">Password</label>
+				<input type="password" name="password" id="password" size="15" /><br />
+				<div class="actionButtons dis-shortButtons" align="center">
+					<input name="Submit" type="submit" value="Login" class="ButtonSubmit" />
+				</div>
+			</div>
+		</form>
+	</div>
+	<br class="clear" />			
+</div><!-- close #left -->
+<!-- END contentBlock -->

@@ -1,0 +1,28 @@
+** Order Confirmation **
+
+
+Distributor:  {dsdisn}  {ordrop}    {dsname}
+Order:        {orordn}
+Date:         {orordt}
+
+Purchase Order Number:    {orpono}             Requested Ship Date: {orrqdt}
+
+-----------------------------------------------------------------------------------------------------------
+Product                  Description							Quantity Ordered
+-----------------------------------------------------------------------------------------------------------
+<!-- BEGIN orderItemBlock -->
+{orcatn}              {Description} {oroqty}
+<!-- END orderItemBlock -->
+
+
+
+Comments
+
+{occom1}
+{occom2}
+{occhg1}
+{occhg2}
+
+* Actual quantity and ship date are subject to availability.
+
+                          ** Thank you for your order  **
